@@ -1,5 +1,4 @@
 <script>
-  import './App.css';
   import TwitterFollowCard from './components/TwitterFollowCard';
 
   const users = [
@@ -21,3 +20,20 @@
     <TwitterFollowCard {userName} {name} {isFollowing} />
   {/each}
 </section>
+
+<style>
+  :global(body) {
+    margin: 0;
+    background: #222;
+    font-family: system-ui;
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+  }
+
+  .app {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+</style>
