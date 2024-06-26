@@ -1,9 +1,7 @@
 <script>
   export let userName = 'unknown';
   export let name;
-  export let initialIsFollowing;
-
-  let isFollowing = initialIsFollowing;
+  export let isFollowing;
 
   const formattedUserName = userName.startsWith('@')
     ? userName

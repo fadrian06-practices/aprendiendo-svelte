@@ -18,6 +18,6 @@
 
 <section class="app">
   {#each users as { userName, name, isFollowing }}
-    <TwitterFollowCard {userName} {name} initialIsFollowing={isFollowing} />
+    <TwitterFollowCard {userName} {name} {isFollowing} />
   {/each}
 </section>
