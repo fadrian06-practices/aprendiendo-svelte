@@ -22,8 +22,8 @@
   <header class="tw-followCard-header">
     <img
       class="tw-followCard-avatar"
-      src={`https://unavatar.io/${userName}`}
-      alt={`El avatar de ${userName}`}
+      src="https://unavatar.io/{userName}"
+      alt="El avatar de {userName}"
     />
     <div class="tw-followCard-info">
       <strong>{name}</strong>
