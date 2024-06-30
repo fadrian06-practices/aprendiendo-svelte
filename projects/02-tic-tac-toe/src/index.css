@@ -18,11 +18,6 @@ body {
   min-height: 100vh;
 }
 
-* {
-  padding: 0;
-  margin: 0;
-}
-
 .board {
   width: fit-content;
   margin: 40px auto;
