@@ -21,7 +21,15 @@
 </script>
 
 <div
-  style="
+  style:transform="translate({position.x}px, {position.y}px)"
+  style:display={enabled ? 'initial' : 'none'}
+></div>
+<button on:click={() => (enabled = !enabled)}>
+  {enabled ? 'Desactivar' : 'Activar'} seguir puntero
+</button>
+
+<style>
+  div {
     position: fixed;
     background-color: rgba(0, 0, 0, 50%);
     border: 3px solid white;
@@ -32,10 +40,5 @@
     top: -20px;
     width: 40px;
     height: 40px;
-    transform: {`translate(${position.x}px, ${position.y}px)`};
-    display: {enabled ? 'initial' : 'none'};
-  "
-></div>
-<button on:click={() => (enabled = !enabled)}>
-  {enabled ? 'Desactivar' : 'Activar'} seguir puntero
-</button>
+  }
+</style>
