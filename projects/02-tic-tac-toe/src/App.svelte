@@ -14,12 +14,7 @@
       : new Array(9).fill(null);
   })();
 
-  let turn = (() => {
-    const turnFromStorage = window.localStorage.getItem('turn');
-
-    return turnFromStorage ?? TURNS.X;
-  })();
-
+  let turn = window.localStorage.getItem('turn') ?? TURNS.X;
   let winner = null;
 
   const updateBoard = (index) => {
@@ -30,6 +25,7 @@
     board[index] = turn;
     turn = turn === TURNS.X ? TURNS.O : TURNS.X;
     saveGameToStorage(board, turn);
+
     const newWinner = checkWinner(board);
 
     if (newWinner) {
